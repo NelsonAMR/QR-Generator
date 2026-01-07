@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Generator</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="/src/typescript.svg" alt="Logo" />
+        <h1>Generador de QR</h1>
+      </div>
+      <div>
+        <button>Descargar QR</button>
+      </div>
+    </header>
+    <aside>
+      <div>
+        <div>
+          <h2>Tipo de Contenido</h2>
+          <label
+            ><input type="radio" name="type" value="url" checked />URL</label
+          >
+          <label><input type="radio" name="type" value="text" />Text</label>
+          <label><input type="radio" name="type" value="Wifi" />Wifi</label>
+          <label><input type="radio" name="type" value="vcard" />vCard</label>
+        </div>
+        <div>
+          <label>Enlace del sitio</label>
+          <input type="url" />
+        </div>
+      </div>
+    </aside>
+    <script type="module" src="/src/scripts.ts"></script>
+  </body>
+</html>
+
