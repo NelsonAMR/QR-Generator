@@ -9,4 +9,101 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* MAIN VARIABLES */
+  --color-primary: #3399f8;
+  --color-primary-hover: #1d4ed8; /* blue-700 aprox */
+  --color-primary-soft: rgba(51, 153, 248, 0.1);
+
+  /* SLATES */
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
+
+  /* SCROLLBAR */
+  --scrollbar-thumb-light: #cbd5e1;
+  --scrollbar-thumb-dark: #334155;
+
+  /* Backgrounds */
+  --color-bg-main: #f5f7f8;
+  --color-bg-surface: #ffffff;
+  --color-bg-muted: #f8fafc; /* slate-50 */
+  --color-bg-hover: #f1f5f9; /* slate-100 */
+
+  /* Text */
+  --color-text-primary: #0f172a; /* slate-900 */
+  --color-text-secondary: #475569; /* slate-600 */
+  --color-text-muted: #64748b; /* slate-500 */
+  --color-text-disabled: #94a3b8; /* slate-400 */
+
+  /* Borders */
+  --color-border-default: #e2e8f0; /* slate-200 */
+  --color-border-strong: #cbd5e1; /* slate-300 */
+
+  /* Accents */
+  --color-info-bg: #eff6ff; /* blue-50 */
+  --color-info-border: #dbeafe; /* blue-100 */
+}
+
+.dark {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --color-bg-main: #0f1923;
+  --color-bg-surface: #151c2b;
+  --color-bg-muted: #020617; /* slate-950 aprox */
+  --color-bg-hover: #1e293b; /* slate-800 */
+
+  /* Text */
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #cbd5f5; /* slate-300 */
+  --color-text-muted: #94a3b8; /* slate-400 */
+  --color-text-disabled: #64748b; /* slate-500 */
+
+  /* Borders */
+  --color-border-default: #1e293b; /* slate-800 */
+  --color-border-strong: #334155; /* slate-700 */
+
+  /* Accents */
+  --color-info-bg: rgba(30, 58, 138, 0.2); /* blue-900/20 */
+  --color-info-border: rgba(30, 58, 138, 0.5);
+}
+
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-primary);
+  max-width: 80rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .logo {
+    display: flex;
+    gap: 0.5rem;
+
+    & img {
+      width: 1.5rem;
+    }
+
+    & h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+button {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
 }
