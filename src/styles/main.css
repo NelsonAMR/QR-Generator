@@ -1,0 +1,7 @@
+@layer tokens, base, components;
+
+/* Orden explícito */
+@import "./tokens.css" layer(tokens);
+@import "./base.css" layer(base);
+@import "./components/buttons.css" layer(components);
+@import "./components/header.css" layer(components);
