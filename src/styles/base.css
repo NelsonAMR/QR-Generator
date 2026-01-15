@@ -7,7 +7,21 @@
 body {
   background-color: var(--color-bg-main);
   color: var(--color-text-primary);
+  margin-inline: auto;
+}
+
+.main {
+  display: flex;
+  gap: 1rem;
+}
+
+.container {
   max-width: 80rem;
   width: 100%;
   margin-inline: auto;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--color-border-default);
 }

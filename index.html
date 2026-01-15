@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QR Generator</title>
+    <title>QRGenerator</title>
   </head>
   <body>
-    <header>
+    <header class="header container">
       <div class="logo">
         <span class="logo-icon">
           <img src="/src/assets/icons/logo.svg" alt="Logo" />
         </span>
-        <h1>Generador de QR</h1>
+        <h1>QRGenerator</h1>
       </div>
       <div>
         <button class="btn btn-primary btn-download">
@@ -21,101 +21,104 @@
         </button>
       </div>
     </header>
-    <aside>
-      <div>
-        <div>
-          <h2>Tipo de Contenido</h2>
-          <label
-            ><input type="radio" name="type" value="url" checked />URL</label
-          >
-          <label><input type="radio" name="type" value="text" />Text</label>
-          <label><input type="radio" name="type" value="Wifi" />Wifi</label>
-          <label><input type="radio" name="type" value="vcard" />vCard</label>
-        </div>
-        <div>
-          <label>Enlace del sitio</label>
-          <input type="url" />
-        </div>
-      </div>
-      <div>
-        <div>
-          <img src="src/typescript.svg" alt="Icono Personalizacion" />
-          <h2>Personalizacion Visual</h2>
-        </div>
+    <hr class="divider" />
+    <main class="main container">
+      <aside class="aside">
         <div>
           <div>
-            <div>
-              <label>Color Frontal</label>
-              <input type="color" value="#000000" />
-            </div>
-            <div>
-              <label>Color Fondo</label>
-              <input type="color" value="#ffffff" />
-            </div>
-          </div>
-          <div>
-            <label>Tamaño del margen</label>
-            <input type="number" value="10" min="0" max="100" /><span>px</span>
-          </div>
-          <div>
-            <label>Redondes de Puntos</label>
-            <input type="number" value="0" min="0" max="100" /><span>%</span>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <img src="src/typescript.svg" alt="Icono Logo" />
-          <h2>Logotipo</h2>
-        </div>
-        <div>
-          <label>Subir Logo</label>
-          <input type="file" accept="image/*" />
-        </div>
-        <div>
-          <label>Tamaño del logo</label>
-          <input type="number" value="20" min="0" max="100" /><span>%</span>
-        </div>
-      </div>
-      <div>
-        <div>
-          <img src="src/typescript.svg" alt="Icono Avanzado" />
-          <h2>Opciones Avanzadas</h2>
-        </div>
-      </div>
-    </aside>
-    <main>
-      <div class="qr-container">
-        <header>
-          <div>
-            <img src="./src/typescript.svg" alt="Icono Previa" />
-            <h2>Previsualización</h2>
-          </div>
-          <span>200 x 200</span>
-        </header>
-        <canvas id="qr-canvas"></canvas>
-        <footer>
-          <div>
-            <img src="src/typescript.svg" alt="Icono Copiar" />
-            <img src="./src/typescript.svg" alt="Icono Compartir" />
-          </div>
-          <div>
+            <h2>Tipo de Contenido</h2>
             <label
-              ><input type="radio" name="format" id="png" checked />PNG</label
+              ><input type="radio" name="type" value="url" checked />URL</label
             >
-            <label><input type="radio" name="format" id="jpg" />JPG</label>
-            <label><input type="radio" name="format" id="svg" />SVG</label>
+            <label><input type="radio" name="type" value="text" />Text</label>
+            <label><input type="radio" name="type" value="Wifi" />Wifi</label>
+            <label><input type="radio" name="type" value="vcard" />vCard</label>
           </div>
-        </footer>
-      </div>
-      <div>
-        <img src="src/typescript.svg" alt="Icono Informacion" />
+          <div>
+            <label>Enlace del sitio</label>
+            <input type="url" />
+          </div>
+        </div>
         <div>
-          <h3>Generacion en tiempo real</h3>
-          <p>
-            Cualquier cambio en los parámetros se reflejará inmediatamente en la
-            previsualización del QR.
-          </p>
+          <div>
+            <img src="src/typescript.svg" alt="Icono Personalizacion" />
+            <h2>Personalizacion Visual</h2>
+          </div>
+          <div>
+            <div>
+              <div>
+                <label>Color Frontal</label>
+                <input type="color" value="#000000" />
+              </div>
+              <div>
+                <label>Color Fondo</label>
+                <input type="color" value="#ffffff" />
+              </div>
+            </div>
+            <div>
+              <label>Tamaño del margen</label>
+              <input type="number" value="10" min="0" max="100" /><span>px</span>
+            </div>
+            <div>
+              <label>Redondes de Puntos</label>
+              <input type="number" value="0" min="0" max="100" /><span>%</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img src="src/typescript.svg" alt="Icono Logo" />
+            <h2>Logotipo</h2>
+          </div>
+          <div>
+            <label>Subir Logo</label>
+            <input type="file" accept="image/*" />
+          </div>
+          <div>
+            <label>Tamaño del logo</label>
+            <input type="number" value="20" min="0" max="100" /><span>%</span>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img src="src/typescript.svg" alt="Icono Avanzado" />
+            <h2>Opciones Avanzadas</h2>
+          </div>
+        </div>
+      </aside>
+      <div>
+        <div class="qr-container">
+          <div>
+            <div>
+              <img src="./src/typescript.svg" alt="Icono Previa" />
+              <h2>Previsualización</h2>
+            </div>
+            <span>200 x 200</span>
+          </div>
+          <canvas id="qr-canvas"></canvas>
+          <footer>
+            <div>
+              <img src="src/typescript.svg" alt="Icono Copiar" />
+              <img src="./src/typescript.svg" alt="Icono Compartir" />
+            </div>
+            <div>
+              <label
+                ><input type="radio" name="format" id="png" checked />PNG</label
+              >
+              <label><input type="radio" name="format" id="jpg" />JPG</label>
+              <label><input type="radio" name="format" id="svg" />SVG</label>
+            </div>
+          </footer>
+        </div>
+        <div>
+          <img src="src/typescript.svg" alt="Icono Informacion" />
+          <div>
+            <h3>Generacion en tiempo real</h3>
+            <p>
+              Cualquier cambio en los parámetros se reflejará inmediatamente en la
+              previsualización del QR.
+            </p>
+          </div>
         </div>
       </div>
     </main>

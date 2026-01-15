@@ -5,3 +5,4 @@
 @import "./base.css" layer(base);
 @import "./components/buttons.css" layer(components);
 @import "./components/header.css" layer(components);
+@import "./components/aside.css" layer(components);

@@ -1,0 +1,6 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border-right: 1px solid var(--color-border-default);
+}
