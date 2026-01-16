@@ -7,7 +7,7 @@
     <title>QRGenerator</title>
   </head>
   <body>
-    <header class="header container">
+    <header class="header">
       <div class="logo">
         <span class="logo-icon">
           <img src="/src/assets/icons/logo.svg" alt="Logo" />
@@ -21,20 +21,43 @@
         </button>
       </div>
     </header>
-    <hr class="divider" />
-    <main class="main container">
+    <main class="main">
       <aside class="aside">
         <div>
           <div>
             <h2>Tipo de Contenido</h2>
-            <label
-              ><input type="radio" name="type" value="url" checked />URL</label
-            >
-            <label><input type="radio" name="type" value="text" />Text</label>
-            <label><input type="radio" name="type" value="Wifi" />Wifi</label>
-            <label><input type="radio" name="type" value="vcard" />vCard</label>
+            <div class="aside-options">
+              <label class="btn"
+                ><input type="radio" name="type" value="url" checked /><img
+                  src="src/assets/icons/link.svg"
+                  alt="Icono URL"
+                />
+                URL</label
+              >
+              <label class="btn"
+                ><input type="radio" name="type" value="text" /><img
+                  src="src/assets/icons/title.svg"
+                  alt="Icono Texto"
+                />
+                Text</label
+              >
+              <label class="btn"
+                ><input type="radio" name="type" value="Wifi" /><img
+                  src="src/assets/icons/wifi.svg"
+                  alt="Icono Wifi"
+                />
+                Wifi</label
+              >
+              <label class="btn"
+                ><input type="radio" name="type" value="vcard" /><img
+                  src="src/assets/icons/vcard.svg"
+                  alt="Icono vCard"
+                />
+                vCard</label
+              >
+            </div>
           </div>
-          <div>
+          <div class="input-container">
             <label>Enlace del sitio</label>
             <input type="url" />
           </div>
@@ -57,7 +80,9 @@
             </div>
             <div>
               <label>Tamaño del margen</label>
-              <input type="number" value="10" min="0" max="100" /><span>px</span>
+              <input type="number" value="10" min="0" max="100" /><span
+                >px</span
+              >
             </div>
             <div>
               <label>Redondes de Puntos</label>
@@ -115,8 +140,8 @@
           <div>
             <h3>Generacion en tiempo real</h3>
             <p>
-              Cualquier cambio en los parámetros se reflejará inmediatamente en la
-              previsualización del QR.
+              Cualquier cambio en los parámetros se reflejará inmediatamente en
+              la previsualización del QR.
             </p>
           </div>
         </div>

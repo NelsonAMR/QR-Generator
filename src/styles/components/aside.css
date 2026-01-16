@@ -1,6 +1,53 @@
 .aside {
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  overflow: hidden;
   border-right: 1px solid var(--color-border-default);
+  background-color: var(--color-bg-surface);
+  height: 100%;
+  max-width: 30rem;
+  width: 100%;
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  & .aside-options {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    & .btn {
+      display: flex;
+      background-color: var(--color-bg-hover);
+      cursor: pointer;
+      gap: 0.5rem;
+
+      & img {
+        width: 1rem;
+      }
+
+      & input {
+        display: none;
+      }
+    }
+  }
+
+  & .input-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    & input {
+      padding: 1rem;
+      border-radius: 0.25rem;
+      border: 1px solid var(--color-border-default);
+      background-color: var(--color-bg-main);
+      font-size: 1rem;
+    }
+  }
 }
+
