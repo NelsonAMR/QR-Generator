@@ -11,20 +11,6 @@
     align-items: center;
     gap: 1rem;
 
-    & .logo-icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: var(--color-bg-hover);
-      border-radius: 0.25rem;
-    }
-
-    & img {
-      width: 1.5rem;
-    }
-
     & h1 {
       font-size: 1.5rem;
     }

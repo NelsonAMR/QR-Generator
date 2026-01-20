@@ -9,7 +9,7 @@
   <body>
     <header class="header">
       <div class="logo">
-        <span class="logo-icon">
+        <span class="image-container">
           <img src="/src/assets/icons/logo.svg" alt="Logo" />
         </span>
         <h1>QRGenerator</h1>
@@ -62,31 +62,60 @@
             <input type="url" />
           </div>
         </div>
-        <div>
-          <div>
-            <img src="src/typescript.svg" alt="Icono Personalizacion" />
+        <div class="config-container">
+          <div class="config-header">
+            <div class="image-container">
+              <img
+                src="src/assets/icons/palette.svg"
+                alt="Icono Personalizacion"
+              />
+            </div>
             <h2>Personalizacion Visual</h2>
           </div>
-          <div>
-            <div>
-              <div>
+          <div class="config-body">
+            <div class="config-color-container">
+              <div class="config-color">
                 <label>Color Frontal</label>
-                <input type="color" value="#000000" />
+                <div class="color-input-container">
+                  <input type="color" value="#000000" />
+                  <span>#000000</span>
+                </div>
               </div>
-              <div>
+              <div class="config-color">
                 <label>Color Fondo</label>
-                <input type="color" value="#ffffff" />
+                <div class="color-input-container">
+                  <input type="color" value="#FFFFFF" />
+                  <span>#FFFFFF</span>
+                </div>
               </div>
             </div>
-            <div>
-              <label>Tamaño del margen</label>
-              <input type="number" value="10" min="0" max="100" /><span
-                >px</span
-              >
+            <div class="config-detail-container">
+              <div class="config-detail">
+                <label>Tamaño del margen</label>
+                <p><span>128</span>px</p>
+              </div>
+              <input
+                type="range"
+                id="nivel-progreso"
+                min="64"
+                max="512"
+                step="32"
+                value="50"
+              />
             </div>
-            <div>
-              <label>Redondes de Puntos</label>
-              <input type="number" value="0" min="0" max="100" /><span>%</span>
+            <div class="config-detail-container">
+              <div class="config-detail">
+                <label>Redondes de Puntos</label>
+                <p><span>10</span>%</p>
+              </div>
+              <input
+                type="range"
+                id="nivel-progreso"
+                min="0"
+                max="100"
+                value="50"
+                step="10"
+              />
             </div>
           </div>
         </div>

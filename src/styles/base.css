@@ -25,8 +25,21 @@ body {
   margin-inline: auto;
 }
 
+.image-container {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg-hover);
+  border-radius: 0.25rem;
+
+  & img {
+    width: 1.5rem;
+  }
+}
+
 .divider {
   border: none;
   border-top: 1px solid var(--color-border-default);
 }
-
