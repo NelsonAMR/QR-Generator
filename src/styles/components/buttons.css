@@ -15,11 +15,11 @@
   justify-content: space-between;
   gap: 0.5rem;
 
-  & span {
+  span {
     font-size: 1rem;
   }
 
-  & img {
+  img {
     width: 1.25rem;
   }
 }
