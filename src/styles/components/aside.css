@@ -29,6 +29,11 @@
         display: none;
       }
     }
+
+    .btn.active {
+      background-color: var(--color-primary);
+      color: white;
+    }
   }
 
   .input-container {
@@ -37,12 +42,36 @@
     flex-direction: column;
     gap: 0.5rem;
 
-    input {
-      padding: 1rem;
-      border-radius: 0.5rem;
-      border: 1px solid var(--color-border-default);
-      background-color: var(--color-bg-main);
-      font-size: 1rem;
+    .input-group {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      input,
+      textarea {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--color-border-default);
+        background-color: var(--color-bg-main);
+        font-size: 1rem;
+        width: 100%;
+        font-family: inherit;
+      }
+
+      select {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--color-border-default);
+        background-color: var(--color-bg-main);
+        font-size: 1rem;
+        width: 100%;
+        font-family: inherit;
+      }
+
+      button {
+        font-size: 1rem;
+      }
     }
   }
 

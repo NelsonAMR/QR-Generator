@@ -23,32 +23,32 @@
     </header>
     <main class="main">
       <aside class="aside">
-        <div>
+        <div class="input-section">
           <div>
             <h2>Tipo de Contenido</h2>
-            <div class="aside-options">
-              <label class="btn"
+            <div class="aside-options" id="type-options">
+              <label class="btn active" data-type="url"
                 ><input type="radio" name="type" value="url" checked /><img
                   src="src/assets/icons/link.svg"
                   alt="Icono URL"
                 />
                 URL</label
               >
-              <label class="btn"
+              <label class="btn" data-type="text"
                 ><input type="radio" name="type" value="text" /><img
                   src="src/assets/icons/title.svg"
                   alt="Icono Texto"
                 />
                 Text</label
               >
-              <label class="btn"
+              <label class="btn" data-type="wifi"
                 ><input type="radio" name="type" value="Wifi" /><img
                   src="src/assets/icons/wifi.svg"
                   alt="Icono Wifi"
                 />
                 Wifi</label
               >
-              <label class="btn"
+              <label class="btn" data-type="vcard"
                 ><input type="radio" name="type" value="vcard" /><img
                   src="src/assets/icons/vcard.svg"
                   alt="Icono vCard"
@@ -58,8 +58,15 @@
             </div>
           </div>
           <div class="input-container">
-            <label>Enlace del sitio</label>
-            <input type="url" placeholder="http://www.example.com" />
+            <label id="input-label">Enlace del sitio</label>
+            <div class="input-group" id="input-group">
+              <input
+                type="url"
+                placeholder="http://www.example.com"
+                id="input-qr-data"
+              />
+              <button id="btn-generate" class="btn btn-primary">Generar</button>
+            </div>
           </div>
         </div>
         <div class="config-container">
