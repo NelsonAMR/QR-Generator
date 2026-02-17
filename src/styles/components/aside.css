@@ -86,6 +86,24 @@
       gap: 0.5rem;
       padding: 1rem;
       border-bottom: 1px solid var(--color-border-default);
+      cursor: pointer;
+      width: 100%;
+      justify-content: space-between;
+      
+      .config-header-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        img {
+          width: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1.25rem;
+          font-weight: bold;
+        }
+      }
     }
 
     .config-body {
