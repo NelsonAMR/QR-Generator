@@ -80,6 +80,18 @@
     border: 1px solid var(--color-border-default);
     border-radius: 0.5rem;
 
+    &.collapsed {
+      .config-body {
+        max-height: 0;
+        opacity: 0;
+        padding: 0 1rem;
+      }
+
+      .chevron {
+        transform: rotate(180deg);
+      }
+    }
+
     .config-header {
       display: flex;
       align-items: center;
@@ -103,6 +115,10 @@
           font-size: 1.25rem;
           font-weight: bold;
         }
+      }
+
+      .chevron {
+        transition: transform 0.3s ease;
       }
     }
 
