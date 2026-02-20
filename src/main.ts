@@ -1,7 +1,7 @@
 import "./styles/main.css";
 
-import "./scripts/qr-generation";
 import "./scripts/type-content";
-import "./scripts/visual-personalization";
 import "./scripts/collapse-section"
+import "./scripts/visual-personalization";
+import "./scripts/qr-generation";
 

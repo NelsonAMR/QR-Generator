@@ -19,13 +19,13 @@ function renderInput(type: ContentType) {
     case "url":
       inputLabel.textContent = "Enlace del sitio";
       inputGroup.innerHTML = `
-                <input type="url" placeholder="http://www.example.com" />
+                <input type="url" placeholder="http://www.example.com" id="input-qr-data"/>
             `;
       break;
     case "text":
       inputLabel.textContent = "Texto a codificar";
       inputGroup.innerHTML = `
-                <textarea placeholder="Escribe el texto aquí"></textarea>
+                <textarea placeholder="Escribe el texto aquí" id="input-qr-data"></textarea>
             `;
       break;
     case "wifi":
