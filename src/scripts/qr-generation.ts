@@ -13,8 +13,6 @@ function generateQR(text: string) {
 }
 
 btnGenerate.addEventListener("click", () => {
-  console.log(input);
-  console.log(input.value);
   generateQR(input.value)
 });
 
