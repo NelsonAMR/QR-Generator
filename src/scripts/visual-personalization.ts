@@ -10,6 +10,12 @@ const backColorInput = document.getElementById(
 const backColorTextInput = document.getElementById(
   "back-color-text",
 ) as HTMLInputElement;
+const sizeSelector = document.getElementById("size-selector") as HTMLProgressElement;
+const sizeValueDisplay = document.getElementById("size-value") as HTMLSpanElement;
+sizeValueDisplay.textContent = String(sizeSelector.value) + "px";
+const roundedSelector = document.getElementById("rounded-selector") as HTMLInputElement;
+const roundedValueDisplay = document.getElementById("rounded-value") as HTMLSpanElement;
+roundedValueDisplay.textContent = String(roundedSelector.value) + "%";
 
 function updateColorPreview(input: HTMLInputElement) {
   const colorValue = input.value;
@@ -29,6 +35,14 @@ function updateColorInput(input: HTMLInputElement) {
   }
 }
 
+function updateSizeValue() {
+  sizeValueDisplay.textContent = String(sizeSelector.value) + "px";
+}
+
+function updateRoundedValue() {
+  roundedValueDisplay.textContent = String(roundedSelector.value) + "%";
+}
+
 frontColorInput.addEventListener("input", () =>
   updateColorPreview(frontColorInput),
 );
@@ -42,4 +56,8 @@ frontColorTextInput.addEventListener("input", () =>
 backColorTextInput.addEventListener("input", () =>
   updateColorInput(backColorTextInput),
 );
+
+sizeSelector.addEventListener("input", updateSizeValue);
+
+roundedSelector.addEventListener("input", updateRoundedValue);
 
