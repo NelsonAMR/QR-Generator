@@ -1,18 +1,16 @@
-import QRCode from "qrcode";
+import { qrState } from "./qr/qr-state";
+import { updateQR } from "./qr/qr-update";
 
-const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+const btnGenerate = document.getElementById(
+  "btn-generate",
+) as HTMLButtonElement;
 const input = document.getElementById("input-qr-data") as HTMLInputElement;
-const btnGenerate = document.getElementById("btn-generate") as HTMLButtonElement;
-
-function generateQR(text: string) {
-  if (!canvas) return;
-
-  QRCode.toCanvas(canvas, text, (error) => {
-    if (error) console.error(error);
-  });
-}
 
 btnGenerate.addEventListener("click", () => {
-  generateQR(input.value)
+  if (!input.value.trim()) return;
+
+  qrState.data = input.value;
+  console.log("Updating QR with:", qrState.data);
+  updateQR();
 });
 

@@ -15,7 +15,7 @@
         <h1>QRGenerator</h1>
       </div>
       <div>
-        <button class="btn btn-primary btn-download">
+        <button class="btn btn-primary btn-download" id="download-qr">
           <img src="/src/assets/icons/download.svg" alt="Icono Descargar" />
           <span>Descargar QR</span>
         </button>
@@ -59,8 +59,7 @@
           </div>
           <div class="input-container">
             <label id="input-label" for="input-qr-data"></label>
-            <div class="input-group" id="input-group">
-            </div>
+            <div class="input-group" id="input-group"></div>
             <button id="btn-generate" class="btn btn-primary">Generar</button>
           </div>
         </div>
@@ -75,7 +74,11 @@
               </div>
               <h2>Personalizacion Visual</h2>
             </div>
-            <img src="src/assets/icons/chevron.svg" alt="Contenedor colapsado" class="chevron">
+            <img
+              src="src/assets/icons/chevron.svg"
+              alt="Contenedor colapsado"
+              class="chevron"
+            />
           </div>
           <div class="config-body">
             <div class="config-color-container">
@@ -142,7 +145,11 @@
               </div>
               <h2>Logotipo</h2>
             </div>
-            <img src="src/assets/icons/chevron.svg" alt="Contenedor colapsado" class="chevron">
+            <img
+              src="src/assets/icons/chevron.svg"
+              alt="Contenedor colapsado"
+              class="chevron"
+            />
           </div>
           <div class="config-body">
             <div class="config-logo-container">
@@ -175,9 +182,7 @@
             </div>
             <span class="preview-header-size">200 x 200 px</span>
           </header>
-          <div class="qr-container">
-            <canvas id="canvas"></canvas>
-          </div>
+          <div class="qr-container" id="qr-container"></div>
           <footer class="preview-footer">
             <div class="share-options">
               <img src="src/assets/icons/copy.svg" alt="Icono Copiar" />
@@ -214,7 +219,7 @@
         </div>
       </div>
     </main>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="./src/scripts/main.ts"></script>
   </body>
 </html>
 
