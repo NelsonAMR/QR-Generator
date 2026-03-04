@@ -8,7 +8,7 @@ export function updateQR() {
 
     data: qrState.data,
 
-    margin: qrState.margin, // usa el estado real
+    margin: qrState.margin,
 
     dotsOptions: {
       color: qrState.frontColor,

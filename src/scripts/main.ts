@@ -19,4 +19,3 @@ if (!qrContainer) {
 qr.append(qrContainer);
 
 updateQR();
-
