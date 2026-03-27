@@ -109,7 +109,7 @@
             </div>
             <div class="config-detail-container">
               <div class="config-detail">
-                <label>Tamaño del margen</label>
+                <label>Tamaño del QR</label>
                 <span id="size-value"></span>
               </div>
               <input
@@ -185,8 +185,11 @@
           <div class="qr-container" id="qr-container"></div>
           <footer class="preview-footer">
             <div class="share-options">
-              <img src="src/assets/icons/copy.svg" alt="Icono Copiar" />
-              <img src="src/assets/icons/share.svg" alt="Icono Compartir" />
+              <button type="button" class="btn btn-copy" id="copy-qr-btn">
+                <img src="src/assets/icons/copy.svg" alt="Icono Copiar" />
+                <span>Copiar</span>
+              </button>
+              <span id="copy-feedback" class="copy-feedback" aria-live="polite"></span>
             </div>
             <span class="footer-divider"></span>
             <div class="format-options">

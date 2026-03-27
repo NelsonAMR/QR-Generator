@@ -1,7 +1,16 @@
 import { qr } from "./qr-instance";
 import { qrState } from "./qr-state";
 
-export function updateQR() {
+let scheduledFrameId: number | null = null;
+
+function getDotsType(rounded: number) {
+  if (rounded <= 0) return "square";
+  if (rounded >= 100) return "dots";
+  if (rounded >= 60) return "extra-rounded";
+  return "rounded";
+}
+
+function renderQRNow() {
   qr.update({
     width: qrState.size,
     height: qrState.size,
@@ -12,12 +21,7 @@ export function updateQR() {
 
     dotsOptions: {
       color: qrState.frontColor,
-      type:
-        qrState.rounded === 0
-          ? "square"
-          : qrState.rounded < 50
-            ? "rounded"
-            : "extra-rounded",
+      type: getDotsType(qrState.rounded),
     },
 
     backgroundOptions: {
@@ -29,6 +33,19 @@ export function updateQR() {
       imageSize: qrState.logo.size,
       margin: 5,
     },
+  });
+}
+
+export function updateQR() {
+  renderQRNow();
+}
+
+export function scheduleUpdateQR() {
+  if (scheduledFrameId !== null) return;
+
+  scheduledFrameId = requestAnimationFrame(() => {
+    scheduledFrameId = null;
+    renderQRNow();
   });
 }
 

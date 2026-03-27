@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 2rem;
   margin: 3rem auto;
+  height: 100%;
 
   .preview-header {
     display: flex;
@@ -57,12 +58,26 @@
     .share-options {
       display: flex;
       gap: 1rem;
+      align-items: center;
 
-      img {
-        cursor: pointer;
-        width: 1.5rem;
-        height: 1.5rem;
-        filter: invert(0.5);
+      .btn-copy {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        border: 1px solid var(--color-border-default);
+        background-color: var(--color-bg-hover);
+        color: var(--color-text-primary);
+        font-size: 1rem;
+
+        img {
+          width: 1.5rem;
+          filter: invert(0.5);
+        }
+      }
+
+      .copy-feedback {
+        font-size: 0.875rem;
+        color: var(--color-text-secondary);
       }
     }
 
@@ -79,6 +94,11 @@
         input {
           display: none;
         }
+      }
+
+      .btn.active {
+        background-color: var(--color-primary);
+        color: white;
       }
     }
   }

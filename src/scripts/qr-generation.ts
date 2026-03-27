@@ -10,7 +10,6 @@ btnGenerate.addEventListener("click", () => {
   if (!input.value.trim()) return;
 
   qrState.data = input.value;
-  console.log("Updating QR with:", qrState.data);
   updateQR();
 });
 
